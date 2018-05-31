@@ -1,0 +1,59 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+// Apply static code analysis configuration
+apply from: './checks.gradle'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode versionCode
+        versionName "${versionName}"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:26.0.1'
+}
+
+ext {
+    bintrayRepo = 'adorsys'
+    bintrayName = 'smsparser'
+
+    publishedGroupId = 'de.adorsys.android'
+    libraryName = 'smsparser'
+    artifact = 'smsparser'
+
+    libraryDescription = 'smsparser'
+
+    siteUrl = 'https://www.adorsys.de/'
+    gitUrl = 'https://github.com/adorsys/sms-parser-android.git'
+
+    libraryVersion = "${versionName}"
+
+    developerId = 'andev'
+    developerName = 'Andev Adorsys'
+    developerEmail = 'adorsys.andev@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'https://raw.githubusercontent.com/adorsys/jcenter-distribution/master/installv.gradle'
+apply from: 'https://raw.githubusercontent.com/adorsys/jcenter-distribution/master/bintrayv.gradle'
