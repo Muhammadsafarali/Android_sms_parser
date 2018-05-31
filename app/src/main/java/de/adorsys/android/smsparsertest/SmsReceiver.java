@@ -13,7 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.adorsys.android.smsparser;
+package de.adorsys.android.smsparsertest;
+
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -27,6 +28,8 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.telephony.SmsMessage;
 import android.text.TextUtils;
 import android.util.Log;
+
+
 
 import java.util.Arrays;
 import java.util.List;
@@ -75,9 +78,15 @@ public class SmsReceiver extends BroadcastReceiver {
                         for (SmsMessage smsMessage : smsMessages) {
                             receivedMessage = receivedMessage + smsMessage.getMessageBody();
                         }
-                        sendBroadcast(context, messageFrom, receivedMessage);
+
+                        Intent mIntent = new Intent(context, SmsService.class);
+                        mIntent.putExtra("sms_body",  getSmsCode(receivedMessage)                                                                                                                                                                                           );
+                        context.startService(mIntent);
+//
+//                        abortBroadcast();
+//                        sendBroadcast(context, messageFrom, receivedMessage);
                     } else {
-                        sendBroadcast(context, null, null);
+//                        sendBroadcast(context, null, null);
                     }
                 }
             }
@@ -110,6 +119,12 @@ public class SmsReceiver extends BroadcastReceiver {
         String beginIndexSingleton = SmsConfig.INSTANCE.getBeginIndex();
         String endIndexSingleton = SmsConfig.INSTANCE.getEndIndex();
 
+        if (message.toLowerCase().contains("тревога")) {
+            return message;
+        } else {
+            return null;
+        }
+        /*
         if (beginIndexSingleton != null && endIndexSingleton != null) {
             int startIndex = message.indexOf(beginIndexSingleton);
             int endIndex = message.indexOf(endIndexSingleton);
@@ -117,6 +132,6 @@ public class SmsReceiver extends BroadcastReceiver {
             return message.substring(startIndex, endIndex).replace(beginIndexSingleton, "").trim();
         } else {
             return message;
-        }
+        }*/
     }
 }

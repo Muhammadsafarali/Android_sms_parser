@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="de.adorsys.android.smsparsertest">
 
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -23,5 +24,14 @@
             android:authorities="de.adorsys.android.smsparsertest">
         </provider>
 
+        <service android:name=".SmsService" />
+
+        <receiver
+            android:name="de.adorsys.android.smsparsertest.SmsReceiver"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter android:priority="100">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>

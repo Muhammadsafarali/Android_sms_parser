@@ -15,17 +15,17 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
--keepclasseswithmembers public class de.adorsys.android.smsparser.SmsTool {
+-keepclasseswithmembers public class de.adorsys.android.smsparsertest.SmsTool {
     public <fields>;
     public <methods>;
 }
 
--keepclasseswithmembers public class de.adorsys.android.smsparser.SmsReceiver {
+-keepclasseswithmembers public class de.adorsys.android.smsparsertest.SmsReceiver {
     public <fields>;
     public <methods>;
 }
 
--keepclasseswithmembers public class de.adorsys.android.smsparser.SmsConfig {
+-keepclasseswithmembers public class de.adorsys.android.smsparsertest.SmsConfig {
     public <fields>;
     public <methods>;
 }

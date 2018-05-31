@@ -32,7 +32,6 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
@@ -40,10 +39,6 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import de.adorsys.android.smsparser.SmsConfig;
-import de.adorsys.android.smsparser.SmsReceiver;
-import de.adorsys.android.smsparser.SmsTool;
 
 public class MainActivity extends ListActivity implements LoaderManager.LoaderCallbacks<Cursor>  {
 
