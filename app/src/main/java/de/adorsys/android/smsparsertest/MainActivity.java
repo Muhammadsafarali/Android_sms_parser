@@ -40,6 +40,9 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import de.adorsys.android.smsparsertest.sql.SmsContentProvider;
+import de.adorsys.android.smsparsertest.sql.SmsTable;
+
 public class MainActivity extends ListActivity implements LoaderManager.LoaderCallbacks<Cursor>  {
 
     private static final String pref_key_number = "ru.soyer.tom.sms_parser.number";

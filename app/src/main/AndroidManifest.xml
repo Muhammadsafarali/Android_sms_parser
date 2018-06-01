@@ -20,7 +20,7 @@
         </activity>
 
         <provider
-            android:name=".SmsContentProvider"
+            android:name=".sql.SmsContentProvider"
             android:authorities="de.adorsys.android.smsparsertest">
         </provider>
 

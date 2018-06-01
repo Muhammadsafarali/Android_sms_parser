@@ -1,4 +1,4 @@
-package de.adorsys.android.smsparsertest;
+package de.adorsys.android.smsparsertest.sql;
 
 import android.database.sqlite.SQLiteDatabase;
 

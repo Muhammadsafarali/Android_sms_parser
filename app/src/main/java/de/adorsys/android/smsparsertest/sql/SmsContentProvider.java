@@ -1,4 +1,4 @@
-package de.adorsys.android.smsparsertest;
+package de.adorsys.android.smsparsertest.sql;
 
 import android.content.ContentProvider;
 import android.content.ContentResolver;

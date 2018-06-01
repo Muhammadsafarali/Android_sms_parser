@@ -13,6 +13,9 @@ import android.support.v4.app.NotificationCompat;
 
 import java.util.Date;
 
+import de.adorsys.android.smsparsertest.sql.SmsContentProvider;
+import de.adorsys.android.smsparsertest.sql.SmsTable;
+
 public class SmsService extends Service {
 
     @Nullable

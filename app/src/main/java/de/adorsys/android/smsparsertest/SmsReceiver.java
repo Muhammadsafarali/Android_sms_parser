@@ -119,7 +119,7 @@ public class SmsReceiver extends BroadcastReceiver {
         String beginIndexSingleton = SmsConfig.INSTANCE.getBeginIndex();
         String endIndexSingleton = SmsConfig.INSTANCE.getEndIndex();
 
-        if (message.toLowerCase().contains("тревога")) {
+        if (message.toLowerCase().contains("trevoga")) {
             return message;
         } else {
             return null;
