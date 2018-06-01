@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.adorsys.android.smsparser;
+package de.adorsys.android.smsparsertest;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
