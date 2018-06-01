@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Built application files
 *.apk
 *.ap_
@@ -63,3 +64,13 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
+=======
+*.iml
+.gradle
+!/gradle/wrapper/gradle-wrapper.jar
+/local.properties
+.idea
+!.idea/codeStyleSettings.xml
+.DS_Store
+/build
+>>>>>>> first commit
