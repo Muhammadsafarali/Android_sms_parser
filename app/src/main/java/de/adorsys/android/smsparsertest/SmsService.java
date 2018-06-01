@@ -40,10 +40,11 @@ public class SmsService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        String sms_body = intent.getExtras().getString("sms_body");
-        showNotification(sms_body);
-        saveSms(sms_body);
-
+        if (intent != null) {
+            String sms_body = intent.getExtras().getString("sms_body");
+            showNotification(sms_body);
+            saveSms(sms_body);
+        }
         return START_STICKY;
     }
 
