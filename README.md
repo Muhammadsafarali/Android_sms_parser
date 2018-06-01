@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# Android_sms_parser
+Android sms Receiver &amp;&amp; Service &amp;&amp; ContentProvider
+=======
+>>>>>>> 28b94ab
 # SMS Parser - Android
 
 ## Receiving and Parsing SMS Messages on Android Devices
@@ -113,3 +120,7 @@ You must create register and unregister methods for the BroadcastReceiver and ca
 [@drilonreqica](https://github.com/drilonreqica)
 
 [@itsmortoncornelius](https://github.com/itsmortoncornelius)
+<<<<<<< HEAD
+=======
+>>>>>>> first commit
+>>>>>>> 28b94ab
